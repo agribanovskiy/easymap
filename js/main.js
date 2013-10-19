@@ -37,7 +37,14 @@ $(document).ready(function () {
     }
     
     // initialization
-	$("#textdata").keyup(function (event) {
+
+    var editor = CodeMirror.fromTextArea(document.getElementById("textdata"), {
+        mode: "text/html"
+    }).on("change", function () {
+        drawImage();
+    });
+
+	$("#textdata1").keyup(function (event) {
         drawImage();
     });
     
