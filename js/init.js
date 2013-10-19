@@ -2,11 +2,11 @@ $(document).ready(function () {
     function drawImage(textdata) {
         if (!textdata) {
             textdata = $("#textdata").val();
-            }
-        data = d3.csv.parseRows(textdata),
-        width = $('#map').width(),
-        height = $('#map').height(),
-        svg = d3.select('#map svg');
+        }          
+            var data = d3.csv.parseRows(textdata),
+            width = $('#map').width(),
+            height = $('#map').height(),
+            svg = d3.select('#map svg');
         
         svg.selectAll('rect').remove();
 
@@ -26,7 +26,7 @@ $(document).ready(function () {
                 return d[1] * 4;
             });
     }
-    
+
     // fuzzyset initialization
     var i = 0, max = em.TITLES.length;
     
