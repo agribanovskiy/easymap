@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-                <title>EasyMaplr.tk</title>
+		<title>EasyMaplr.tk</title>
+		
 		<link rel="stylesheet" type="text/css" href="css/style.css?1" />
-                <link rel="stylesheet" type="text/css" href="css/responsiv.css?1" />
-                <link rel="stylesheet" type="text/css" href="css/codemirror.css?1" />		
+		<link rel="stylesheet" type="text/css" href="css/responsiv.css?1" />
+		<link rel="stylesheet" type="text/css" href="css/codemirror.css?1" />		
 		
 		<script type="text/javascript" >
 			var em = {};
@@ -13,10 +14,10 @@
 		<script charset="utf-8" src="js/libs/jquery.min.js?1"></script>
 		
 		<script charset="utf-8" src="js/libs/d3.v3.min.js?1"></script>
-        <script charset="utf-8" src="js/libs/queue.v1.min.js"></script>
-        <script charset="utf-8" src="js/libs/d3.geo.projection.v0.min.js"></script>
-        <script charset="utf-8" src="js/libs/topojson.v0.min.js"></script>
-        
+		<script charset="utf-8" src="js/libs/queue.v1.min.js?1"></script>
+		<script charset="utf-8" src="js/libs/d3.geo.projection.v0.min.js?1"></script>
+		<script charset="utf-8" src="js/libs/topojson.v0.min.js?1"></script>
+		
 		<script charset="utf-8" src="js/libs/fileSaver.js?1"></script>
 		<script charset="utf-8" src="js/libs/blob.js?1"></script>
 		<script charset="utf-8" src="js/libs/canvasToBlob.js?1"></script>
@@ -25,15 +26,17 @@
 		<script charset="utf-8" src="js/libs/canvg/StackBlur.js?1"></script>
 		<script charset="utf-8" src="js/libs/canvg/canvg.js?1"></script>
 		
-		<script charset="utf-8" src="js/libs/fuzzyset.js"></script>
+		<script charset="utf-8" src="js/libs/fuzzyset.js?1"></script>
 
-        <script charset="utf-8" src="js/libs/codemirror.js"></script>
+        <script charset="utf-8" src="js/libs/codemirror.js?1"></script>
 		<script charset="utf-8" src="js/downloader.js?1"></script>
-		<script charset="utf-8" src="js/titles.js"></script>
-		<script charset="utf-8" src="js/validate.js"></script>
+		<script charset="utf-8" src="js/titles.js?1"></script>
+		<script charset="utf-8" src="js/validate.js?1"></script>
+		<script charset="utf-8" src="js/disqus.js?1"></script>
 		<script charset="utf-8" src="js/init.js?1"></script>
 	</head>
 	<body>
+<<<<<<< HEAD
             <div class="footer" id="footer">
                 <a href="http://devrand.github.io/easymap/" target="_top" alt="EASYMAPLR" title="EASYMAPLR">
                     <h1>EASYMAPLR</h1>
@@ -78,5 +81,36 @@
             </div>
             
             <div class="bottom" id="bottom"></div>
+=======
+		<div class="footer" id="footer">
+			<!--a href="http://devrand.github.io/easymap/" target="_top" alt="EASYMAPLR" title="EASYMAPLR">
+				<h1>EASYMAPLR</h1>
+			</a-->
+		</div>
+		<div class="main" id="main">
+			<div class="data">
+				<textarea id="textdata" class="textdata"></textarea>
+				<div id="table"></div>
+			</div>
+			<div class="map_container">
+				<div class="map" id="map">
+					<svg class="map_svg" id="map_svg" xmlns="http://www.w3.org/2000/svg"></svg>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="download-button-wrapper">
+				<span class="download-button" id="download-svg">Download SVG</span>
+				<span class="download-button" id="download-png">Download PNG</span>
+			</div>
+		</div>
+		
+		<div class="disqus" id="disqus">
+			<!-- easymaplr.disqus.com START -->           
+			<div id="disqus_thread"></div>
+			<!-- easymaplr.disqus.com END -->   
+		</div>
+		
+		<div class="bottom" id="bottom"></div>
+>>>>>>> bd2eaa7cd2ca324f764cf70ef598ea75b300d5bc
 	</body>
 </html>
