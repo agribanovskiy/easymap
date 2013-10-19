@@ -1,0 +1,60 @@
+.main {
+	width: 1024px;
+	display: block;
+	margin: 0 auto;
+}
+
+.data {
+	float: left;
+	width: 400px;
+	height: 500px;
+}
+
+.data textarea {
+	width: 400px;
+	height: 500px;
+	margin: 0;
+	padding: 0;
+}
+
+#map {
+	float: right;
+	width: 600px;
+	height: 500px;
+	border: solid 1px green;
+}
+
+.map_svg  {
+	float: right;
+	width: 800px;
+	height: 500px;
+	border: solid 1px red;
+}
+
+.clear {
+	clear: both;
+}
+
+.download-button {
+<<<<<<< HEAD
+	background: #0a0;
+	color: #fff;
+=======
+	color: #FFFFFF;
+>>>>>>> fd84cfff437b5b207ae8ef35e71e1a1bbfe981a4
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin: 10px 0 0 0;
+	cursor: pointer;
+	text-align: center;
+}
+
+.download-button.red {
+	background: #FF0000;
+}
+
+.download-button.green {
+	background: #00AA00;
+}
