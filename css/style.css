@@ -24,12 +24,24 @@
 	border: solid 1px green;
 }
 
+.map_svg  {
+	float: right;
+	width: 800px;
+	height: 500px;
+	border: solid 1px red;
+}
+
 .clear {
 	clear: both;
 }
 
 .download-button {
+<<<<<<< HEAD
+	background: #0a0;
+	color: #fff;
+=======
 	color: #FFFFFF;
+>>>>>>> fd84cfff437b5b207ae8ef35e71e1a1bbfe981a4
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
