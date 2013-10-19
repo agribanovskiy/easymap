@@ -1,0 +1,30 @@
+.main {
+	width: 1024px;
+	height: 600px;
+	display: block;
+	margin: 0 auto;
+}
+
+.data {
+	float: left;
+	width: 400px;
+	height: 600px;
+}
+
+.data textarea {
+	width: 400px;
+	height: 600px;
+	margin: 0;
+	padding: 0;
+}
+
+.map {
+	float: right;
+	width: 600px;
+	height: 600px;
+	border: solid 1px green;
+}
+
+.clear {
+	clear: both;
+}
