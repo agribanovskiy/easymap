@@ -105,6 +105,14 @@ em.validator = (function () {
                 _result[index].isError = false;
                 _showData(_result);
                  
+                 easy_choropleth({
+                        colors: colors.Blues,
+                        width: 960,
+                        height: 600,    
+                        datasource: "oblasti.topo.json",
+                        data: [{name:'', id:'', value:0}],
+                        selector: "#map_svg" 
+                });
             }
         });
     }
