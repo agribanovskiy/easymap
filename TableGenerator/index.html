@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>jQuery UI Button - Default functionality</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css"/>
+    <script>
+        $(function () {
+            function parseRawTextData(text) {
+                return [
+                    ["Luhanska", "11%"],
+                    ["Donetska", "25%"],
+                    ["Lvivska", "21%" ]
+                ];
+            }
+
+            function generateTable(wholeData) {
+                var table = $('<table></table>');
+                $.each(wholeData, function (index, rowData) {
+                    var row = $('<tr></tr>');
+                    $.each(rowData, function (index, cellData) {
+                        var cell = $('<td></td>').text(cellData);
+                        row.append(cell);
+                    });
+                    table.append(row);
+                });
+                $('#here_table').empty();
+                $('#here_table').append(table);
+            }
+
+            var mainTextArea = $('#mainTextArea');
+            mainTextArea.bind('input propertychange', function () {
+                var parsedData = parseRawTextData(mainTextArea.val());
+                generateTable(parsedData);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<textarea rows="4" cols="20" id="mainTextArea">
+    Luhanska, 12
+    Juziwska, 15
+    Lvivska, 23
+</textarea>
+
+<div id="here_table"/>
+
+
+</body>
+</html>
