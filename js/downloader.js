@@ -26,12 +26,14 @@ em.downloader = {
 				.style("display","none"),
 			canvas = document.getElementById(that._TEMP_CANVAS_ID);
 		
-		canvg(that._TEMP_CANVAS_ID, $(that._MAP_SELECTOR).html().trim());
+		canvg(
+			that._TEMP_CANVAS_ID,
+			$(that._MAP_SELECTOR).html().trim()
+		);
 		
 		canvas.toBlob(function(blob) {
 			saveAs(blob, fileName + ".png");
+			d3.select("#" + that._TEMP_CANVAS_ID).remove();
 		}, "image/png");
-		
-		d3.select("#" + that._TEMP_CANVAS_ID).remove();
 	}
 }
