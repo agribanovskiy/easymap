@@ -1,0 +1,107 @@
+/* 
+    Document   : mystyle
+    Created on : 19 жовт 2013, 16:56:54
+    Author     : roman
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#upload {
+    display: none;
+}
+
+#datainput {
+    display: none;
+}
+
+#menu li {
+    display: inline;
+}
+
+#mapcontainer {
+    float: right;
+    width: 48%;
+    margin: 0;
+}
+
+#content-container {
+    margin: 0;
+    width: 48%;
+    float:left;
+}
+
+#menu {
+    background-color: lightgray;
+}
+
+.tab {
+}
+
+.activeTab {
+    color: red;
+}
+
+#textdata {
+    height: 500px;
+    width: 300px;
+    overflow: auto;
+}
+
+#data {
+    border: solid 1px;
+    float: right;
+}
+
+#buttons {
+    clear: both;
+}
+
+#map {
+    overflow: auto;
+}
+
+#mapbuttons {
+    float: right;
+}
+
+.button {
+   border-top: 1px solid #ba8800;
+   background: #664b00;
+   background: -webkit-gradient(linear, left top, left bottom, from(#c49104), to(#664b00));
+   background: -webkit-linear-gradient(top, #c49104, #664b00);
+   background: -moz-linear-gradient(top, #c49104, #664b00);
+   background: -ms-linear-gradient(top, #c49104, #664b00);
+   background: -o-linear-gradient(top, #c49104, #664b00);
+   padding: 4px 8px;
+   -webkit-border-radius: 13px;
+   -moz-border-radius: 13px;
+   border-radius: 13px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: Georgia, Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #4d3300;
+   background: #4d3300;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #000000;
+   background: #000000;
+   }
+   
+   .div {
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	border:#f5b400 1px solid; // Öâåò ôîíà
+	box-shadow: 0 0 5px rgba(187, 138, 1, 1); // Ïàðàìåòðû òåíè
+	-webkit-box-shadow: 0 0 5px rgba(187, 138, 1, 1); // Äëÿ Safari è Chrome
+	-moz-box-shadow: 0 0 5px rgba(187, 138, 1, 1); // Äëÿ Firefox
+		}
