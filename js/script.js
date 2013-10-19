@@ -28,9 +28,10 @@ function drawImage() {
         .attr("x", function (d, i) {
             return i * (width / data.length);
         })
-       .attr("y", function (d) { return height - d[1]})
+       .attr("y", function (d) { return height - d[1] })
 .attr("width", width / data.length - 1)
 .attr("height", function (d) {
-    return d[1]*4;
+    return d[1] * 4;
 });
+}
 
