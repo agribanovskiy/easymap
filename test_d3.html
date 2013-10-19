@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<script charset="utf-8" src="js/libs/d3.v3.min.js?1"></script>
+		<script charset="utf-8" src="js/libs/queue.v1.min.js"></script>
+		<script charset="utf-8" src="js/libs/d3.geo.projection.v0.min.js"></script>
+		<script charset="utf-8" src="js/libs/topojson.v0.min.js"></script>
+
+  	<body>
+ 		
+		<svg class="map_svg" id="map_svg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+
+
+		<script charset="utf-8" src="js/choropleth.js"></script>
+                <script>
+		easy_choropleth({
+			colors: colors.Blues,
+			width: 960,
+			height: 600,    
+			datasource: "oblasti.topo.json",
+			data: [{name:'', id:'', value:0}],
+			selector: "#map_svg" 
+		});
+
+                </script>  
