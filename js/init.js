@@ -25,4 +25,14 @@ $(document).ready(function () {
     $("#download-png").click(function () {
         em.downloader.downloadPNG("test");
     });
+    $('.draw').click(function () {
+        easy_choropleth({
+                colors: '#999999',
+                width: 960,
+                height: 600,    
+                datasource: "oblasti.topo.json",
+                data: em.validator.getResult(),
+                selector: "#map_svg" 
+        });
+    })
 });

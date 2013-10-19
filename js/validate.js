@@ -10,8 +10,7 @@ em.validator = (function () {
             result[i] = result[i].split(',');
         }
         _result = _validateTitles(result);
-         
-         
+
          easy_choropleth({
             colors: '#999999',
             width: 960,
@@ -120,7 +119,7 @@ em.validator = (function () {
                         width: 960,
                         height: 600,    
                         datasource: "oblasti.topo.json",
-                        data: [{name:'', id:'', value:0}],
+                        data: em.validator.getResult(),
                         selector: "#map_svg" 
                 });
             }
@@ -132,6 +131,9 @@ em.validator = (function () {
     
     return {
         getData : _getDataArray,
-        showData : _showData
+        showData : _showData,
+        getResult : function () {
+            return _result;
+        }
     }
 })();
