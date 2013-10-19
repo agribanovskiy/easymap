@@ -7,20 +7,20 @@
 .data {
 	float: left;
 	width: 400px;
-	height: 600px;
+	height: 500px;
 }
 
 .data textarea {
 	width: 400px;
-	height: 600px;
+	height: 500px;
 	margin: 0;
 	padding: 0;
 }
 
-.map {
+#map {
 	float: right;
 	width: 600px;
-	height: 600px;
+	height: 500px;
 	border: solid 1px green;
 }
 
@@ -29,7 +29,6 @@
 }
 
 .download-button {
-	background: #00AA00;
 	color: #FFFFFF;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -38,4 +37,12 @@
 	margin: 10px 0 0 0;
 	cursor: pointer;
 	text-align: center;
+}
+
+.download-button.red {
+	background: #FF0000;
+}
+
+.download-button.green {
+	background: #00AA00;
 }
