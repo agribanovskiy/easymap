@@ -36,12 +36,8 @@
 }
 
 .download-button {
-<<<<<<< HEAD
-	background: #0a0;
-	color: #fff;
-=======
+	background: #00AA00;
 	color: #FFFFFF;
->>>>>>> fd84cfff437b5b207ae8ef35e71e1a1bbfe981a4
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
