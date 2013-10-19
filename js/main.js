@@ -40,8 +40,6 @@ $(document).ready(function () {
 
     var editor = CodeMirror.fromTextArea(document.getElementById("textdata"), {
         mode: "text/html"
-    }).on("change", function () {
-        drawImage();
     });
 
 	$("#textdata1").keyup(function (event) {
