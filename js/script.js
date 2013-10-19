@@ -3,8 +3,12 @@ $(document).ready(function () {
         drawImage();
 
     });
-});
 
+	$("#download").click(function () {
+		var svg = $(".map").children("svg");
+		
+	});
+});
 
 
 function drawImage() {
@@ -30,4 +34,3 @@ function drawImage() {
     return d[1]*4;
 });
 
-}

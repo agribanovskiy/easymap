@@ -1,6 +1,5 @@
 .main {
 	width: 1024px;
-	height: 600px;
 	display: block;
 	margin: 0 auto;
 }
@@ -27,4 +26,16 @@
 
 .clear {
 	clear: both;
+}
+
+.download-button {
+	background: #00AA00;
+	color: #FFFFFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin: 10px 0 0 0;
+	cursor: pointer;
+	text-align: center;
 }
