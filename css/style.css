@@ -27,10 +27,11 @@
 }
 
 .data textarea {
-    width: 400px;
-    height: 500px;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	width: 400px;
+	height: 500px;
+	margin: 0;
+	padding: 10px;
 }
 
 #map {
