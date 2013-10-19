@@ -1,8 +1,9 @@
 $(document).ready(function () {
-    /*
-    function drawImage() {
-        var textdata = $("#textdata").val(),
-            data = d3.csv.parseRows(textdata),
+    function drawImage(textdata) {
+        if (!textdata) {
+            textdata = $("#textdata").val();
+        }          
+            var data = d3.csv.parseRows(textdata),
             width = $('#map').width(),
             height = $('#map').height(),
             svg = d3.select('#map svg');
@@ -25,7 +26,7 @@ $(document).ready(function () {
                 return d[1] * 4;
             });
     }
-    */
+
     // fuzzyset initialization
     var i = 0, max = em.TITLES.length;
     
@@ -35,9 +36,14 @@ $(document).ready(function () {
         em.fuzzyset.add(em.TITLES[i]);
     }
     
+
     // initialization
-    $("#textdata").change(function (event) {
-        var data = em.validator.getData(this.value);
+    var editor = CodeMirror.fromTextArea(document.getElementById("textdata"), {
+        mode: "text/html",
+        lineNumbers: true
+    });
+    editor.on("change", function (e) {
+        drawImage(e.getValue());
     });
     
     $("#download-svg").click(function () {
