@@ -41,10 +41,10 @@ $(document).ready(function () {
     });
     
     $("#download-svg").click(function () {
-        downloader.downloadSVG("test");
+        em.downloader.downloadSVG("test");
     });
     
     $("#download-png").click(function () {
-        downloader.downloadPNG("test");
+        em.downloader.downloadPNG("test");
     });
 });
