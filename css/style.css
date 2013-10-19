@@ -17,7 +17,7 @@
 	padding: 0;
 }
 
-.map {
+#map {
 	float: right;
 	width: 600px;
 	height: 500px;
