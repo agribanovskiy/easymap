@@ -1,5 +1,3 @@
-em = {};
-
 $(document).ready(function () {
     function drawImage() {
         var textdata = $("#textdata").val(),
@@ -37,23 +35,15 @@ $(document).ready(function () {
     }
     
     // initialization
-
-    var editor = CodeMirror.fromTextArea(document.getElementById("textdata"), {
-        mode: "text/html"
-    }).on("change", function () {
-        drawImage();
-    });
-
-	$("#textdata1").keyup(function (event) {
+    $("#textdata").keyup(function (event) {
         drawImage();
     });
     
-	$("#download-svg").click(function () {
-		downloader.downloadSVG("test");
-	});
-	
-	$("#download-png").click(function () {
-		downloader.downloadPNG("test");
-	});
+    $("#download-svg").click(function () {
+        downloader.downloadSVG("test");
+    });
+    
+    $("#download-png").click(function () {
+        downloader.downloadPNG("test");
+    });
 });
-
