@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    /*
     function drawImage() {
         var textdata = $("#textdata").val(),
             data = d3.csv.parseRows(textdata),
@@ -24,7 +25,7 @@ $(document).ready(function () {
                 return d[1] * 4;
             });
     }
-    
+    */
     // fuzzyset initialization
     var i = 0, max = em.TITLES.length;
     
@@ -35,8 +36,8 @@ $(document).ready(function () {
     }
     
     // initialization
-    $("#textdata").keyup(function (event) {
-        drawImage();
+    $("#textdata").change(function (event) {
+        var data = em.validator.getData(this.value);
     });
     
     $("#download-svg").click(function () {
