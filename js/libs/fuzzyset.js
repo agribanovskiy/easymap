@@ -1,5 +1,3 @@
-var em = {};
-
 em.Fuzzyset = (function() {
 
     var FuzzySet = function(arr, useLevenshtein, gramSizeLower, gramSizeUpper) {
