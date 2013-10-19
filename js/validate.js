@@ -1,3 +1,5 @@
+em = em || {};
+
 em.validator = (function () {
     function _getDataArray(dataString) {
         var result, i = 0, max;

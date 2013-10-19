@@ -1,4 +1,6 @@
-var downloader = downloader || {
+em = em || {};
+
+em.downloader = {
 	_MAP_SELECTOR: "#map",
 	_TEMP_CANVAS_ID: "temp-canvas",
 	
@@ -19,15 +21,19 @@ var downloader = downloader || {
 		var that = this,
 			content = d3.select("body").append("canvas")
 				.attr("id", that._TEMP_CANVAS_ID)
+				.style("width","600px")
+				.style("height","500px")
 				.style("display","none"),
 			canvas = document.getElementById(that._TEMP_CANVAS_ID);
 		
-		canvg(that._TEMP_CANVAS_ID, $(that._MAP_SELECTOR).html().trim());
+		canvg(
+			that._TEMP_CANVAS_ID,
+			$(that._MAP_SELECTOR).html().trim()
+		);
 		
 		canvas.toBlob(function(blob) {
 			saveAs(blob, fileName + ".png");
+			d3.select("#" + that._TEMP_CANVAS_ID).remove();
 		}, "image/png");
-		
-		d3.select("#" + that._TEMP_CANVAS_ID).remove();
 	}
 }
