@@ -1,4 +1,4 @@
-var em = {};
+var em = em || {};
 
 em.Fuzzyset = (function() {
 
