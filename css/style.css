@@ -1,34 +1,50 @@
+.footer {
+    display: block;
+    width: 1024px;
+    height: 30px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: #0ff;
+}
+.bottom {
+    width: 1024px;
+    height: 30px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: #0ff;
+}
+
 .main {
-	width: 1024px;
-	display: block;
-	margin: 0 auto;
+    width: 1024px;
+    display: block;
+    margin: 0 auto;
 }
 
 .data {
-	float: left;
-	width: 400px;
-	height: 500px;
+    float: left;
+    width: 400px;
+    height: 500px;
 }
 
 .data textarea {
-	width: 400px;
-	height: 500px;
-	margin: 0;
-	padding: 0;
+    width: 400px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
 }
 
 #map {
-	float: right;
-	width: 600px;
-	height: 500px;
-	border: solid 1px green;
+    float: right;
+    width: 600px;
+    height: 500px;
+    border: solid 1px green;
 }
 
 .map_svg  {
-	float: right;
-	width: 800px;
-	height: 500px;
-	border: solid 1px red;
+    float: right;
+    width: 800px;
+    height: 500px;
+    border: solid 1px red;
 }
 
 .clear {
