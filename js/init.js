@@ -45,10 +45,6 @@ $(document).ready(function () {
     editor.on("change", function (e) {
         drawImage(e.getValue());
     });
-
-    $("#textdata1").keyup(function (event) {
-        drawImage();
-    });
     
     $("#download-svg").click(function () {
         downloader.downloadSVG("test");
