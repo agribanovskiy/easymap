@@ -90,6 +90,16 @@ html, body {
 .cell.errorValue {
 	font-size: 14px;
 }
+.draw {
+	border: 2px solid;
+	padding: 4px 10px;
+	box-sizing: border-box;
+	width: 150px;
+	height: 40px;
+	line-height: 30px;
+	font-weight: bold;
+	font-size: 20px;
+}
 #map {
     float: right;
     width: 700px;
