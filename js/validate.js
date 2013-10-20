@@ -22,7 +22,8 @@ em.validator = (function () {
             fuzzyResult; 
         
         for (; i < max; i += 1) {
-            fuzzyResult = em.fuzzyset.get(resultArray[i][0])[0];
+            fuzzyResult = em.fuzzyset.get(resultArray[i][0]);
+            fuzzyResult = fuzzyResult === null ? null : fuzzyResult[0]; 
             
             isError = (fuzzyResult === null || fuzzyResult[0] < PROBABILITY);
             result.push({
