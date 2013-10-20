@@ -11,15 +11,6 @@ em.validator = (function () {
         }
         _result = _validateTitles(result);
 
-         easy_choropleth({
-            colors: '#999999',
-            width: 960,
-            height: 600,    
-            datasource: "oblasti.topo.json",
-            data: [{name:'', id:'', value:0}],
-            selector: "#map_svg" 
-        });
-
         return _result;
     }
     function _validateTitles(resultArray) {
@@ -32,8 +23,6 @@ em.validator = (function () {
         
         for (; i < max; i += 1) {
             fuzzyResult = em.fuzzyset.get(resultArray[i][0])[0];
-            
-            console.log('fuzzyResult',fuzzyResult, 'resultArray[i][0]', resultArray[i][0]);
             
             isError = (fuzzyResult === null || fuzzyResult[0] < PROBABILITY);
             result.push({
@@ -49,7 +38,7 @@ em.validator = (function () {
         var i = 0, j = 0, max = data.length, len,
             row,
             cell,
-            table = document.getElementById('table'),
+            table = document.getElementById('data-table'),
             fragment = document.createDocumentFragment('div'),
             errorDom,
             prop;
@@ -117,7 +106,7 @@ em.validator = (function () {
                 _showData(_result);
                  
                  easy_choropleth({
-                        colors: '#999999',
+                        colors: colors.Greens,
                         width: 960,
                         height: 600,    
                         datasource: "oblasti.topo.json",
