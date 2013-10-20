@@ -11,6 +11,15 @@ em.validator = (function () {
         }
         _result = _validateTitles(result);
 
+         easy_choropleth({
+            colors: '#999999',
+            width: 960,
+            height: 600,    
+            datasource: "oblasti.topo.json",
+            data: [{name:'', id:'', value:0}],
+            selector: "#map_svg" 
+        });
+
         return _result;
     }
     function _validateTitles(resultArray) {

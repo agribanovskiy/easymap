@@ -1,21 +1,18 @@
 html, body {
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
-	font: 14px sans-serif;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font: 14px sans-serif;
 }
-
-.footer {
+.header {
     height: 30px;
     text-align: center;
-    /*background-color: #0ff;*/
+    background-color: #ddd;
 }
-
-.footer h1 {
+.header h1 {
     font-size: 20px;
-    color: #000;
+    color: #999;
 }
-
-.bottom {
+.footer {
     width: 100%;
     height: 30px;
     left: 0px;
@@ -23,80 +20,68 @@ html, body {
     bottom: 0px;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
-    /*background-color: #0ff;*/
+    background-color: #ddd;
 }
-
 .main {
-    width: 1024px;
+    width: 100%;
     display: block;
     margin: 0 auto;
 }
-
 .data {
     float: left;
     width: 600px;
     height: 500px;
 }
-
 .data .CodeMirror {
     box-sizing: border-box;
     float: left;
-	width: 300px;
-	height: 500px;
-	margin: 0;
-	padding: 10px;
+    width: 300px;
+    height: 500px;
+    margin: 0;
+    padding: 10px;
     border: 1px solid black;
 }
-
-#textdata {
-	box-sizing: border-box;
-	width: 300px;
-	height: 500px;
-	margin: 0;
-	padding: 10px;
-}
-
-#table {
-	box-sizing: border-box;
-	float: right;
-	width: 300px;
-	height: 500px;
-	border: solid 1px #AA0000;
-	margin: 0;
-}
-
 .row {
 	height: 30px;
 	width: 300px;
 }
-
+#data-text {
+    box-sizing: border-box;
+    width: 300px;
+    height: 500px;
+    margin: 0;
+    padding: 10px;
+}
+#data-table {
+    box-sizing: border-box;
+    float: right;
+    width: 276px;
+    height: 500px;
+    border: solid 1px #AA0000;
+    margin: 0;
+}
 .row.error {
-	background-color: #FFBBBB;
+    background-color: #FFBBBB;
 }
-
 .cell {
-	float: left;
-	border: 2px solid;
-	height: 28px;
-	padding: 4px 10px;
-	box-sizing: border-box;
-	text-align: center;
+    float: left;
+    border: 2px solid;
+    height: 28px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    text-align: center;
 }
-
 .cell.number {
-	width: 50px;
+    width: 50px;
 }
-
 .cell.value {
-	width: 75px;
+    width: 75px;
 }
-
 .cell.name {
-	width: 175px;
+    width: 175px;
 }
-
 .cell.errorValue {
-	font-size: 14px;
+    font-size: 14px;
 }
 .draw {
 	border: 2px solid;
@@ -109,25 +94,32 @@ html, body {
 	font-size: 20px;
 }
 .draw:hover{
-	background-color: #d7d7d7;
+	background-color: #EEEEEE;
 }
 #map {
     float: right;
     width: 700px;
+
+    border: 2px solid;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    width: 150px;
+    height: 40px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 20px;
 }
 .map_container {
     width: 400px;
     height: 500px;
-	float: right;
+    float: right;
 }
-
 #map {
-	display: block;
+    display: block;
     width: 400px;
     height: 498px;
     border: solid 1px green;
 }
-
 .map_svg  {
 	/*
     float: right;
@@ -136,49 +128,40 @@ html, body {
     border: solid 1px red;
 	*/
 }
-
 .clear {
 	clear: both;
 }
-
 download-button-wrapper {
     display: inline;
     right: 10px;
     max-width: 700px;
 }
-
 .download-button {
-	color: #fff;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	padding: 5px 10px;
-	margin: 10px 0 0 10px;
-	cursor: pointer;
-	text-align: center;
-	width: 100px;
-	max-width: 200px;
-	float: right;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px 0 0 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 100px;
+    max-width: 200px;
+    float: right;
     display: block;
 }
-
 .download-button:first-child{
     background: #00AA00;
 }
-
 .download-button:last-child{
     background: #FF0000;
 }
-
 .red {
-	background: #f00;
+    background: #f00;
 }
-
 .green {
-	background: #0a0;
+    background: #0a0;
 }
-
 .disqus {
     
 }
-

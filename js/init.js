@@ -9,7 +9,7 @@ $(document).ready(function () {
         em.fuzzyset.add(em.TITLES[i]);
     }
     // initialization
-    textarea = em.CodeMirror.fromTextArea($("#textdata")[0], {
+    textarea = em.CodeMirror.fromTextArea($("#data-text")[0], {
         mode: "text/html",
         lineNumbers: true
     });
