@@ -47,14 +47,14 @@ html, body {
     padding: 10px;
     border: 1px solid black;
 }
-#textdata {
+#data-text {
     box-sizing: border-box;
     width: 300px;
     height: 500px;
     margin: 0;
     padding: 10px;
 }
-#table {
+#data-table {
     box-sizing: border-box;
     float: right;
     width: 276px;
