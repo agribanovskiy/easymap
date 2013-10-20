@@ -26,12 +26,22 @@ $(document).ready(function () {
         em.downloader.downloadPNG("test");
     });
     $('.draw').click(function () {
+        var result = [];
+        em.validator.getResult().forEach(function (item) {
+            result.push({
+                name : item.name,
+                id : '',
+                value  : item.value
+            });
+        });
+        
+        console.log('draw', result);
         easy_choropleth({
-                colors: '#999999',
+                colors: colors.Reds,
                 width: 960,
                 height: 600,    
                 datasource: "oblasti.topo.json",
-                data: em.validator.getResult(),
+                data: result,
                 selector: "#map_svg" 
         });
     })

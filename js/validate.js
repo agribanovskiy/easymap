@@ -24,7 +24,9 @@ em.validator = (function () {
         for (; i < max; i += 1) {
             fuzzyResult = em.fuzzyset.get(resultArray[i][0])[0];
             
-            isError = fuzzyResult === null || fuzzyResult[0] < PROBABILITY;
+            console.log('fuzzyResult',fuzzyResult, 'resultArray[i][0]', resultArray[i][0]);
+            
+            isError = (fuzzyResult === null || fuzzyResult[0] < PROBABILITY);
             result.push({
                 value : resultArray[i][1].replace(/^\s+|\s+$/g,''),    // trin string
                 name : isError ? '' : fuzzyResult[1],
@@ -34,7 +36,7 @@ em.validator = (function () {
         return result;
     }
     function _showData(data) {
-        console.log('data', data);
+        //console.log('data', data);
         var i = 0, j = 0, max = data.length, len,
             row,
             cell,
