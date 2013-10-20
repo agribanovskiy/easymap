@@ -40,12 +40,13 @@ html, body {
 	overflow-y: auto;
 	float: left;
 	width: 300px;
-	height: 150px;
+	height: 600px;
 	margin: 0;
 	padding: 10px;
 	border: 1px solid black;
-	background-color: #d7d7d7;
-	color: #0066FF;
+	background-color: #E7e7e7;
+	color: #004499;
+	font-size: 16px;
 }
 .CodeMirror-gutter {
 	border-right: 1px solid #000;
@@ -56,45 +57,48 @@ html, body {
 	border-right:#000000;
 }
 .row {
-	height: 30px;
 	width: 300px;
+	overflow: hidden;
+	border: 2px solid;
+	border-bottom: 0px;
 }
 #data-table {
+	position:absolute;
+	top:80px;
+	right: 0px;
     box-sizing: border-box;
-	width: 300px;
-	height: 400px;
+	width: 250px;
+	height: 600px;
 	overflow-y: auto;
+	overflow-x: hidden;
+	float: right;
 }
 .row.error {
     background-color: #FFBBBB;
 }
 .cell {
     float: left;
-    border-top: 2px solid;
     padding: 4px 10px;
     box-sizing: border-box;
     text-align: center;
 }
 .cell.number {
     width: 40px;
-    border-left: 2px solid;
-    border-right: 2px solid;
 }
 .cell.value {
     width: 70px;
 }
 .cell.name {
     width: 175px;
-    border-left: 2px solid;
     border-right: 2px solid;
 }
 .cell.errorValue {
     font-size: 14px;
 }
-.draw {
+.insert-default,
+#choose-color-map-fill {
 	position: absolute;
 	left: 320px;
-	top: 72px;
 	border: 2px solid;
 	padding: 4px 10px;
 	box-sizing: border-box;
@@ -103,13 +107,19 @@ html, body {
 	line-height: 30px;
 	font-weight: bold;
 	font-size: 20px;
+	text-align:center;
+}
+.insert-default {
+	top: 80px;
+}
+#choose-color-map-fill {
+	top: 135px;
 }
 .draw:hover{
 	background-color: #0066FF;
 }
 #map {
     float: left;
-    width: 700px;
     padding: 4px 10px;
     box-sizing: border-box;
     width: 760px;
@@ -122,11 +132,6 @@ html, body {
     width: 400px;
     height: 500px;
     float: right;
-}
-.map_svg  {
-    float: right;
-    width: 100%;
-    height: 500px;
 }
 .clear {
 	clear: both;

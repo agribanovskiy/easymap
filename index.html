@@ -41,17 +41,20 @@
             </a>
         </header>
         <div class="main" id="main">
-            <button class="draw">Paint</button>
             <button class="insert-default">Insert default</button>
+            <select id="choose-color-map-fill">
+            	<option value="Blues">Blues</option>
+            	<option value="Reds">Reds</option>
+            	<option value="Greens">Greens</option>
+            </select>
             <div class="data">
                 <textarea id="data-text" class="data-text"></textarea>
-                <div id="data-table"></div>
             </div>
             <div class="map" id="map">
-		<svg class="map_svg" id="map_svg" xmlns="http://www.w3.org/2000/svg"></svg>
-				
-		<script charset="utf-8" src="js/choropleth.js"></script>
+				<svg class="map_svg" id="map_svg" xmlns="http://www.w3.org/2000/svg"></svg>		
+				<script charset="utf-8" src="js/choropleth.js"></script>
             </div>
+        	<div id="data-table"></div>
             <div class="clear"></div>
             <div class="download-button-wrapper">
                 <span class="download-button green" id="download-svg">Download SVG</span>

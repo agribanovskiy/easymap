@@ -3,12 +3,14 @@ $(document).ready(function () {
         var data = em.validator.getData(textarea.val());
         em.validator.showData(data);
     }
+    
     // fuzzyset initialization
     var i = 0, max = em.TITLES.length,
         downloadSVG = $("#download-svg"),
         downloadPNG = $("#download-png"),
         draw = $('.draw'),
         insertDefault = $('.insert-default'),
+        mapFillColor = $('#choose-color-map-fill'),
         textarea = $("#data-text"); // comment if use CodeMirror plugin
        /**
         Uncomment to use CodeMirror plugin for numbers in textarea row 
@@ -26,6 +28,7 @@ $(document).ready(function () {
     // initialization
     
     textarea.on("change", textareaChanging);
+    textarea.on("keyup", textareaChanging);
     textarea.bind('paste', textareaChanging);
     
     downloadSVG.click(function () {
@@ -35,29 +38,15 @@ $(document).ready(function () {
     downloadPNG.click(function () {
         em.downloader.downloadPNG("test");
     });
-    draw.click(function () {
-        var result = [];
-        em.validator.getResult().forEach(function (item) {
-            result.push({
-                name : item.name,
-                id : '',
-                value  : item.value
-            });
-        });
-        
-        easy_choropleth({
-                colors: colors.Reds,
-                width: 960,
-                height: 600,    
-                datasource: "oblasti.topo.json",
-                data: result,
-                selector: "#map_svg" 
-        });
-    });
-    insertDefault.click(function () {
-        textarea.val(em.TITLES.join(', 0\n'));
-        textareaChanging(textarea);
-    });
-        
     
+    insertDefault.click(function () {
+        textarea.val(em.TITLES.join(', 1\n') + ', 2');
+        textareaChanging(textarea);
+        em.validator.drawMap();
+    });
+    mapFillColor.change(function (e) {
+        console.log('mapFillColor',mapFillColor);
+        em.validator.fillColor = colors[$(this).find(':selected').text()];
+        em.validator.drawMap();
+    });
 });
