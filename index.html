@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-                <title>EasyMaplr.tk</title>
-                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>EasyMaplr.tk</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
 		<link rel="stylesheet" type="text/css" href="css/style.css?1" />
 		<link rel="stylesheet" type="text/css" href="css/responsiv.css?1" />
 		<link rel="stylesheet" type="text/css" href="css/codemirror.css?1" />		
-		
-		<script type="text/javascript" >
-			var em = {};
-		</script>
 		
 		<script charset="utf-8" src="js/libs/jquery.min.js?1"></script>
 		
@@ -28,12 +26,12 @@
 		
 		<script charset="utf-8" src="js/libs/fuzzyset.js?1"></script>
 
-                <script charset="utf-8" src="js/libs/codemirror.js?1"></script>
+        <script charset="utf-8" src="js/libs/codemirror.js?1"></script>
 		<script charset="utf-8" src="js/downloader.js?1"></script>
 		<script charset="utf-8" src="js/titles.js?1"></script>
 		<script charset="utf-8" src="js/validate.js?1"></script>
 		<script charset="utf-8" src="js/disqus.js?1"></script>
-                <script charset="utf-8" src="js/analytics.js?1"></script>
+        <script charset="utf-8" src="js/analytics.js?1"></script>
 		<script charset="utf-8" src="js/init.js?1"></script>
 	</head>
 	<body>
@@ -43,6 +41,7 @@
             </a>
         </header>
         <div class="main" id="main">
+            <button class="draw">Paint</button>
             <div class="data">
                 <textarea id="data-text" class="data-text"></textarea>
                 <div id="data-table"></div>
@@ -52,7 +51,6 @@
 				
 		<script charset="utf-8" src="js/choropleth.js"></script>
             </div>
-            <button class="draw">Paint</button>
             <div class="clear"></div>
             <div class="download-button-wrapper">
                 <span class="download-button green" id="download-svg">Download SVG</span>
@@ -78,6 +76,6 @@
             <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
             <!-- easymaplr.disqus.com END -->   
         </div>
-        <div class="footer" id="footer"></div>
+        <footer class="footer" id="footer"></footer>
 	</body>
 </html>

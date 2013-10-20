@@ -4,12 +4,9 @@ html, body {
     font: 14px sans-serif;
 }
 .header {
-    height: 30px;
     text-align: center;
-    background-color: #ddd;
 }
 .header h1 {
-    font-size: 20px;
     color: #999;
 }
 .footer {
@@ -29,17 +26,18 @@ html, body {
 }
 .data {
     float: left;
-    width: 600px;
-    height: 500px;
+	width: 300px;
+	height: 800px;
 }
 .data .CodeMirror {
     box-sizing: border-box;
-    float: left;
-    width: 300px;
-    height: 500px;
-    margin: 0;
-    padding: 10px;
-    border: 1px solid black;
+	overflow-y: auto;
+	float: left;
+	width: 300px;
+	height: 150px;
+	margin: 0;
+	padding: 10px;
+	border: 1px solid black;
 }
 .row {
 	height: 30px;
@@ -55,12 +53,9 @@ html, body {
 }
 #data-table {
     box-sizing: border-box;
-    float: right;
-    width: 275px;
-    height: 500px;
-    border: solid 1px #AA0000;
-    margin: 0px;
-    right: 0px;
+	width: 300px;
+	height: 400px;
+	overflow-y: auto;
 }
 .row.error {
     background-color: #FFBBBB;
@@ -86,6 +81,9 @@ html, body {
     font-size: 14px;
 }
 .draw {
+	position: absolute;
+	left: 320px;
+	top: 72px;
 	border: 2px solid;
 	padding: 4px 10px;
 	box-sizing: border-box;
@@ -99,14 +97,12 @@ html, body {
 	background-color: #EEEEEE;
 }
 #map {
-    float: right;
+    float: left;
     width: 700px;
-
-    border: 2px solid;
     padding: 4px 10px;
     box-sizing: border-box;
-    width: 150px;
-    height: 40px;
+    width: 760px;
+    height: 500px;
     line-height: 30px;
     font-weight: bold;
     font-size: 20px;
@@ -116,19 +112,10 @@ html, body {
     height: 500px;
     float: right;
 }
-#map {
-    display: block;
-    width: 400px;
-    height: 498px;
-    border: solid 1px green;
-}
 .map_svg  {
-	
     float: right;
     width: 100%;
     height: 500px;
-    border: solid 1px red;
-	
 }
 .clear {
 	clear: both;

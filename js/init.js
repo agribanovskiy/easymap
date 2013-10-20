@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log('document ready');
     // fuzzyset initialization
     var i = 0, max = em.TITLES.length,
         textarea;
