@@ -18,24 +18,31 @@ em.validator = (function () {
             result = [],
             item,
             name,
+            number,
             isError,
+            isNumber,
+            regexpNumber = /^\d+$/,
             fuzzyResult; 
         
         for (; i < max; i += 1) {
             fuzzyResult = em.fuzzyset.get(resultArray[i][0]);
             fuzzyResult = fuzzyResult === null ? null : fuzzyResult[0]; 
             
+            resultArray[i][1] = resultArray[i][1] || ''; 
             isError = (fuzzyResult === null || fuzzyResult[0] < PROBABILITY);
+            number = resultArray[i][1].replace(/^\s+|\s+$/g,'');             
+            isNumber = regexpNumber.test(number);
+            
             result.push({
-                value : resultArray[i][1].replace(/^\s+|\s+$/g,''),    // trin string
-                name : isError ? '' : fuzzyResult[1],
+                value : isNumber ? number : false,    // trin string
+                name : isError ? false : fuzzyResult[1],
                 isError : isError
             });
         }
         return result;
     }
     function _showData(data) {
-        //console.log('data', data);
+        console.log('data', data);
         var i = 0, j = 0, max = data.length, len,
             row,
             cell,
@@ -61,13 +68,13 @@ em.validator = (function () {
             for (property in data[i]) {
                 if (data[i].hasOwnProperty(property) && property !== 'isError') {
                     prop = data[i][property];
-                    if (data[i].isError) {
+                    if (prop) {
+                        cell = document.createElement('div');
+                        cell.innerText = prop;                        
+                    } else {
                         cell = document.createElement('input');
                         cell.classList.add('errorValue');
                         _bindError(cell, i);
-                    } else {
-                        cell = document.createElement('div');
-                        cell.innerText = prop;                        
                     }
                     cell.classList.add('cell');
                     cell.classList.add(property);
@@ -86,14 +93,10 @@ em.validator = (function () {
             isError;
         
         $(dom).change(function (e) {
-            console.log('this', this);
             if (this.classList.contains('name')) {
                 name = em.fuzzyset.get(this.value)[0];
-                console.log('name',name)
                 
                 if (name !== null && name[0] > PROBABILITY) {
-                    console.log('if');
-                    
                     _result[index].name = name[1];
                     this.value = name[1];
                     this.classList.remove('errorValue');

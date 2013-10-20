@@ -1,7 +1,22 @@
 $(document).ready(function () {
+    function textareaChanging(e) {
+        var data = em.validator.getData(textarea.val());
+        em.validator.showData(data);
+    }
     // fuzzyset initialization
     var i = 0, max = em.TITLES.length,
-        textarea;
+        downloadSVG = $("#download-svg"),
+        downloadPNG = $("#download-png"),
+        draw = $('.draw'),
+        insertDefault = $('.insert-default'),
+        textarea = $("#data-text"); // comment if use CodeMirror plugin
+       /**
+        Uncomment to use CodeMirror plugin for numbers in textarea row 
+        
+        textarea = em.CodeMirror.fromTextArea($("#data-text")[0], {
+            mode: "text/html",
+            lineNumbers: true
+        });*/
     
     em.fuzzyset = em.Fuzzyset() 
     
@@ -9,23 +24,18 @@ $(document).ready(function () {
         em.fuzzyset.add(em.TITLES[i]);
     }
     // initialization
-    textarea = em.CodeMirror.fromTextArea($("#data-text")[0], {
-        mode: "text/html",
-        lineNumbers: true
-    });
-    textarea.on("change", function (e) {
-        var data = em.validator.getData(e.getValue());
-        em.validator.showData(data);
-    });
     
-    $("#download-svg").click(function () {
+    textarea.on("change", textareaChanging);
+    textarea.bind('paste', textareaChanging);
+    
+    downloadSVG.click(function () {
         em.downloader.downloadSVG("test");
     });
     
-    $("#download-png").click(function () {
+    downloadPNG.click(function () {
         em.downloader.downloadPNG("test");
     });
-    $('.draw').click(function () {
+    draw.click(function () {
         var result = [];
         em.validator.getResult().forEach(function (item) {
             result.push({
@@ -35,7 +45,6 @@ $(document).ready(function () {
             });
         });
         
-        console.log('draw', result);
         easy_choropleth({
                 colors: colors.Reds,
                 width: 960,
@@ -45,4 +54,10 @@ $(document).ready(function () {
                 selector: "#map_svg" 
         });
     });
+    insertDefault.click(function () {
+        textarea.val(em.TITLES.join(', 0\n'));
+        textareaChanging(textarea);
+    });
+        
+    
 });

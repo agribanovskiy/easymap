@@ -5,7 +5,7 @@ html, body {
     background-color: #d7d7d7;
 }
 * ::selection {
-	color: #000000 !important; 
+	color: #000000; 
 	background-color:#0066FF;
 }
 .header {
@@ -34,7 +34,8 @@ html, body {
 	width: 300px;
 	height: 800px;
 }
-.data .CodeMirror {
+.data .CodeMirror,
+#data-text {
     box-sizing: border-box;
 	overflow-y: auto;
 	float: left;
@@ -58,14 +59,6 @@ html, body {
 	height: 30px;
 	width: 300px;
 }
-#data-text {
-    box-sizing: border-box;
-    float: left;
-    width: 300px;
-    height: 500px;
-    margin: 0px;
-    padding: 10px;
-}
 #data-table {
     box-sizing: border-box;
 	width: 300px;
@@ -77,20 +70,23 @@ html, body {
 }
 .cell {
     float: left;
-    border: 2px solid;
-    height: 28px;
+    border-top: 2px solid;
     padding: 4px 10px;
     box-sizing: border-box;
     text-align: center;
 }
 .cell.number {
-    width: 50px;
+    width: 40px;
+    border-left: 2px solid;
+    border-right: 2px solid;
 }
 .cell.value {
-    width: 75px;
+    width: 70px;
 }
 .cell.name {
     width: 175px;
+    border-left: 2px solid;
+    border-right: 2px solid;
 }
 .cell.errorValue {
     font-size: 14px;
