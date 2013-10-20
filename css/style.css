@@ -5,8 +5,8 @@ html, body {
     background-color: #d7d7d7;
 }
 * ::selection {
-        color: #000000; 
-        background-color:#0066FF;
+	color: #000000; 
+	background-color:#0066FF;
 }
 .header {
     text-align: left;
@@ -50,18 +50,18 @@ html, body {
     font-size: 15px;
 }
 .CodeMirror-gutter {
-        border-right: 1px solid #000;
-        background-color: #d7d7d7;
-        color: #0066FF;
+	border-right: 1px solid #000;
+	background-color: #d7d7d7;
+	color: #0066FF;
 }
 .CodeMirror-gutters {
-        border-right:#000000;
+	border-right:#000000;
 }
 .row {
-        width: 300px;
-        overflow: hidden;
-        border: 2px solid;
-        border-bottom: 0px;
+	width: 300px;
+	overflow: hidden;
+	border: 2px solid;
+	border-bottom: 0px;
 }
 #data-table {
     position:absolute;
@@ -100,26 +100,26 @@ html, body {
 }
 .insert-default,
 #choose-color-map-fill {
-        position: absolute;
-        left: 320px;
-        border: 2px solid;
-        padding: 4px 10px;
-        box-sizing: border-box;
-        width: 150px;
-        height: 40px;
-        line-height: 30px;
-        font-weight: bold;
-        font-size: 20px;
-        text-align:center;
+	position: absolute;
+	left: 320px;
+	border: 2px solid;
+	padding: 4px 10px;
+	box-sizing: border-box;
+	width: 150px;
+	height: 40px;
+	line-height: 30px;
+	font-weight: bold;
+	font-size: 20px;
+	text-align:center;
 }
 .insert-default {
-        top: 80px;
+	top: 80px;
 }
 #choose-color-map-fill {
-        top: 135px;
+	top: 135px;
 }
 .draw:hover{
-        background-color: #0066FF;
+	background-color: #0066FF;
 }
 #map {
     float: left;
@@ -137,7 +137,7 @@ html, body {
     float: right;
 }
 .clear {
-        clear: both;
+	clear: both;
 }
 download-button-wrapper {
     display: inline;
