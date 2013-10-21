@@ -125,7 +125,7 @@ body {
 .row {
 	width: 300px;
 	overflow: hidden;
-	border: 2px solid;
+	border: 1px solid;
 	border-bottom: 0px;
 }
 #data-table {
@@ -209,7 +209,7 @@ download-button-wrapper {
 }
 .download-button:last-child{
     background: #FF0000;
-}
+} 
 .disqus {
     
 }
