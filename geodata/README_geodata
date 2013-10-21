@@ -1,0 +1,8 @@
+
+How we made topojson file for 'oblasti'
+
+1. Open in QGIS oblasti_new.shp
+2. Export from QGIS as GeoJSON with UTF-8 
+   (there is some unsolved problem with ogr2ogr exporting which leads to bad encoding)
+3. Generate topojson file (-p saves attribute from json in topojson file): 
+  `topojson --id-property osm_id -p name -o oblasti.topo.json oblasti.json`
