@@ -1,22 +1,51 @@
-html, body {
-    margin: 0px;
-    padding: 0px;
-    font: sans-serif;
+html, 
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    top:0px;
+    font: verdana, sans-serif;
     background-color: #d7d7d7;
 }
 * ::selection {
-	color: #000000; 
-	background-color:#0066FF;
+	color: #000; 
+	background-color:#06f;
 }
 .header {
+    width: 300px;
+    height: 64px;
+    top:0px;
+    left: 0px;
+    right:0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     text-align: left;
 }
-.header h1 {
+.header h1, 
+.header a, 
+.header span {
     color: #000;
+    text-decoration: none;
+    font-family: arial;
+}
+.header-name {
+    font-size: 36px;
+    padding: 0px 0px 0px 65px;
+}
+.header-name-sub {
+    font-size: 12px;
+    padding: 0px 0px 0px 68px;
+}
+.header-logo {
+    margin: 0px 0px 0px 5px;
+    background: url('../img/logo_EasyMap_original.png') 0px 0px no-repeat;
+    background-color: transparent;
+    background-size: 64px 64px;
+    width: 300px;
+    height: 64px;
 }
 .footer {
     width: 100%;
-    height: 30px;
+    height: 10px;
     left: 0px;
     right:0px;
     bottom: 0px;
@@ -32,7 +61,7 @@ html, body {
 .data {
     float: left;
     width: 300px;
-    height: 800px;
+    height: 700px;
 }
 .data .CodeMirror,
 #data-text {

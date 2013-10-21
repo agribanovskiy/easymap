@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html>
-	<head>
+    <head>
         <title>EasyMaplr.tk</title>
-        
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		
-		<link rel="stylesheet" type="text/css" href="css/style.css?1" />
-		<link rel="stylesheet" type="text/css" href="css/responsiv.css?1" />
-		<link rel="stylesheet" type="text/css" href="css/codemirror.css?1" />		
-		
-		<script charset="utf-8" src="js/libs/jquery.min.js?1"></script>
-		
-		<script charset="utf-8" src="js/libs/d3.v3.min.js?1"></script>
-		<script charset="utf-8" src="js/libs/queue.v1.min.js?1"></script>
-		<script charset="utf-8" src="js/libs/d3.geo.projection.v0.min.js?1"></script>
-		<script charset="utf-8" src="js/libs/topojson.v0.min.js?1"></script>
-
-		<script charset="utf-8" src="js/libs/fileSaver.js?1"></script>
-		<script charset="utf-8" src="js/libs/blob.js?1"></script>
-		<script charset="utf-8" src="js/libs/canvasToBlob.js?1"></script>
-		
-		<script charset="utf-8" src="js/libs/canvg/rgbcolor.js?1"></script>
-		<script charset="utf-8" src="js/libs/canvg/StackBlur.js?1"></script>
-		<script charset="utf-8" src="js/libs/canvg/canvg.js?1"></script>
-		
-		<script charset="utf-8" src="js/libs/fuzzyset.js?1"></script>
-
+        <link rel="stylesheet" type="text/css" href="css/style.css?1" />
+        <link rel="stylesheet" type="text/css" href="css/responsiv.css?1" />
+        <link rel="stylesheet" type="text/css" href="css/codemirror.css?1" />		
+        <script charset="utf-8" src="js/libs/jquery.min.js?1"></script>
+        <script charset="utf-8" src="js/libs/d3.v3.min.js?1"></script>
+        <script charset="utf-8" src="js/libs/queue.v1.min.js?1"></script>
+        <script charset="utf-8" src="js/libs/d3.geo.projection.v0.min.js?1"></script>
+        <script charset="utf-8" src="js/libs/topojson.v0.min.js?1"></script>
+        <script charset="utf-8" src="js/libs/fileSaver.js?1"></script>
+        <script charset="utf-8" src="js/libs/blob.js?1"></script>
+        <script charset="utf-8" src="js/libs/canvasToBlob.js?1"></script>
+        <script charset="utf-8" src="js/libs/canvg/rgbcolor.js?1"></script>
+        <script charset="utf-8" src="js/libs/canvg/StackBlur.js?1"></script>
+        <script charset="utf-8" src="js/libs/canvg/canvg.js?1"></script>
+        <script charset="utf-8" src="js/libs/fuzzyset.js?1"></script>
         <script charset="utf-8" src="js/libs/codemirror.js?1"></script>
-		<script charset="utf-8" src="js/downloader.js?1"></script>
-		<script charset="utf-8" src="js/titles.js?1"></script>
-		<script charset="utf-8" src="js/validate.js?1"></script>
-		<script charset="utf-8" src="js/disqus.js?1"></script>
+        <script charset="utf-8" src="js/downloader.js?1"></script>
+        <script charset="utf-8" src="js/titles.js?1"></script>
+        <script charset="utf-8" src="js/validate.js?1"></script>
+        <script charset="utf-8" src="js/disqus.js?1"></script>
         <script charset="utf-8" src="js/analytics.js?1"></script>
-		<script charset="utf-8" src="js/init.js?1"></script>
-	</head>
-	<body>
-        <header class="header" id="header">
-            <a href="#" target="_top" alt="EasyMaplr" title="EasyMaplr">
-                <h1>EasyMaplr.tk</h1>
+        <script charset="utf-8" src="js/init.js?1"></script>
+    </head>
+    <body>
+        <div class="header" id="header">
+            <a href="index.html" target="_top" alt="EasyMaplr" title="EasyMaplr">
+                <div class="header-logo" id="header-logo">
+                    <span class="header-name" id="header-name">EasyMaplr</span><br />
+                    <span class="header-name-sub" id="header-name-sub">візуалізація карт - це просто!</span>
+                </div>
+                
             </a>
-        </header>
+        </div>
         <div class="main" id="main">
-            <button class="insert-default">Insert default</button>
-            <select id="choose-color-map-fill">
-            	<option value="Blues">Blues</option>
-            	<option value="Reds">Reds</option>
-            	<option value="Greens">Greens</option>
-            </select>
             <div class="data">
                 <textarea id="data-text" class="data-text"></textarea>
+            </div>
+            <div class="data-setup">
+                <button class="insert-default">Шаблон</button><!--Insert default-->
+                <select id="choose-color-map-fill">
+                    <option value="Blues">Синій</option>
+                    <option value="Reds">Червоний</option>
+                    <option value="Greens">Зелений</option>
+                </select>
             </div>
             <div class="map" id="map">
 				<svg class="map_svg" id="map_svg" xmlns="http://www.w3.org/2000/svg"></svg>		
