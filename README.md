@@ -9,3 +9,7 @@ easymap
 choroplet maps for Ukraine
 
 ======
+
+Прохання скрипти підключати лише в <head>
+
+

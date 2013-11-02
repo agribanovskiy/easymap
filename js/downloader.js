@@ -5,10 +5,10 @@ em.downloader = {
 	_TEMP_CANVAS_ID: "temp-canvas",
 	
 	downloadSVG: function (fileName) {
-		var html = d3.select(this._MAP_SELECTOR).select("svg")
+		var html = $(this._MAP_SELECTOR).select("svg")
 				.attr("version", 1.1)
 				.attr("xmlns", "http://www.w3.org/2000/svg")
-				.node().parentNode.innerHTML,
+				.html().trim(), //.node().parentNode.innerHTML,
 			
 			blob = new Blob([html], {
 				type: "data:image/svg+xml"
@@ -28,7 +28,7 @@ em.downloader = {
 		
 		canvg(
 			that._TEMP_CANVAS_ID,
-			$(that._MAP_SELECTOR).html().trim()
+			$(that._MAP_SELECTOR).select("svg").html().trim()
 		);
 		
 		canvas.toBlob(function(blob) {
